@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Slaptažodžio generatorius</title>
+</head>
+<body>
+    <script>
+
+        let mazosios = "abcdefghijklmnopqrstuvwxyz";
+        let didziosios = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let skaiciai = "0123456789";
+        let specSimboliai = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+        function randomChar(is) {
+            return is[Math.floor(Math.random() * is.length)];
+        }
+
+        let slaptažodis = [
+            randomChar(mazosios),
+            randomChar(didziosios),
+            randomChar(skaiciai),
+            randomChar(specSimboliai)
+        ];
+
+        let visiSimboliai = mazosios + didziosios + skaiciai + specSimboliai;
+
+        for (let i = 0; i < 8; i++) {
+            slaptažodis.push(randomChar(visiSimboliai));
+        }
+
+        for (let i = slaptažodis.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [slaptažodis[i], slaptažodis[j]] = [slaptažodis[j], slaptažodis[i]];
+        }
+
+        let galutinisSlaptazodis = slaptažodis.join('');
+
+        console.log("Sugeneruotas slaptažodis:", galutinisSlaptazodis);
+    </script>
+</body>
+</html>

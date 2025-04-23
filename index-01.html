@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Konvertuoti Eurus į Dolerius</title>
+</head>
+<body>
+    <script>
+
+        function konvertuotiEurusIDolerius(eurai) {
+            let kursas = 1.1;
+            return eurai * kursas;
+        }
+
+        let atsitiktiniaiEurai = Math.floor(Math.random() * 1000) + 1;
+
+        let doleriai = konvertuotiEurusIDolerius(atsitiktiniaiEurai);
+
+        console.log(atsitiktiniaiEurai + " EUR yra maždaug " + doleriai.toFixed(2) + " USD.");
+    </script>
+</body>
+</html>

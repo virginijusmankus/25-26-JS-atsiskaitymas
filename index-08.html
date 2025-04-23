@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dienos iki Kalėdų</title>
+</head>
+<body>
+    <script>
+        let siandien = new Date();
+
+        let metai = siandien.getFullYear();
+        let kaledos = new Date(metai, 11, 25);
+
+        if (siandien > kaledos) {
+            kaledos = new Date(metai + 1, 11, 25);
+        }
+
+        let skirtumasMs = kaledos - siandien;
+
+        let dienosLiko = Math.ceil(skirtumasMs / (1000 * 60 * 60 * 24));
+
+        console.log("Iki Kalėdų liko: " + dienosLiko + " dienų.");
+    </script>
+</body>
+</html>

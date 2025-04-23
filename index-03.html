@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI skaičiavimas</title>
+</head>
+<body>
+    <script>
+
+        let ugis = 1.81;
+        let svoris = 85;
+
+        function skaiciuotiBMI(ugis, svoris) {
+            let bmi = svoris / (ugis * ugis);
+            return bmi;
+        }
+
+        let bmiRezultatas = skaiciuotiBMI(ugis, svoris);
+
+        console.log("Ūgis: " + ugis + " m");
+        console.log("Svoris: " + svoris + " kg");
+        console.log("Kūno masės indeksas (KMI): " + bmiRezultatas.toFixed(2));
+    </script>
+</body>
+</html>

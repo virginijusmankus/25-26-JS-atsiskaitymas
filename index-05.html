@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperatūros konvertavimas</title>
+</head>
+<body>
+    <script>
+
+        let farenheitas = 80;
+        let celsijus = 25;
+
+        function farenheitasICelsiju(f) {
+            return (f - 32) * 5 / 9;
+        }
+
+        function celsijusIFarenheita(c) {
+            return (c * 9 / 5) + 32;
+        }
+
+        let celsijusRez = farenheitasICelsiju(farenheitas);
+        let farenheitasRez = celsijusIFarenheita(celsijus);
+
+        // Atspausdinti rezultatus
+        console.log(farenheitas + " °F yra " + celsijusRez.toFixed(2) + " °C");
+        console.log(celsijus + " °C yra " + farenheitasRez.toFixed(2) + " °F");
+    </script>
+</body>
+</html>
